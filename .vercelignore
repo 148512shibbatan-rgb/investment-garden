@@ -1,0 +1,8 @@
+node_modules
+public
+.quartz
+.quartz-cache
+.git
+docs
+Dockerfile
+CODE_OF_CONDUCT.md

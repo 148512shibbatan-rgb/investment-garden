@@ -1,0 +1,6 @@
+{
+  "buildCommand": "rm -rf .quartz .quartz-cache && npx quartz plugin install && npx quartz build",
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
