@@ -8,6 +8,7 @@ publish: true
 個別銘柄の分析ノート一覧（MOC）。
 
 - [[NVIDIA]]
+- [[Broadcom]]
 - [[Kioxia]]
 - [[東京エレクトロン]]
 - [[アドバンテスト]]
