@@ -9,6 +9,9 @@ publish: true
 
 - [[NVIDIA]]
 - [[Broadcom]]
+- [[Micron]]
+- [[AMD]]
+- [[Intel]]
 - [[Kioxia]]
 - [[東京エレクトロン]]
 - [[アドバンテスト]]
