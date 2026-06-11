@@ -1,0 +1,25 @@
+== date ==
+Thu Jun 11 13:54:58 UTC 2026
+== node ==
+v22.22.2
+== npx ==
+/opt/node22/bin/npx
+== vercel api reachability ==
+http=403
+== token whoami ==
+Host not in allowlist
+== deploy attempt ==
+npm warn deprecated tar@7.5.7: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 54.11.1 (Node.js 22.22.2)
+> NOTE: The Vercel CLI now collects telemetry regarding usage of the CLI.
+> This information is used to shape the CLI roadmap and prioritize features.
+> You can learn more, including how to opt-out if you'd not like to participate in this program, by visiting the following URL:
+> https://vercel.com/docs/cli/about-telemetry
+Retrieving project…
+Error: Response Error
+npm notice
+npm notice New major version of npm available! 10.9.7 -> 11.16.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.16.0
+npm notice To update run: npm install -g npm@11.16.0
+npm notice
