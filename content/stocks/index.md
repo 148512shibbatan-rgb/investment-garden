@@ -29,6 +29,7 @@ publish: true
 - [[三井不動産]]
 - [[SuperMicro]]
 - [[ラム・リサーチ]]
+- [[SpaceX]]
 
 ## 関連
 - [[AIインフラ]]
