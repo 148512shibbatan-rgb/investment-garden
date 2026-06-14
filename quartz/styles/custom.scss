@@ -69,6 +69,15 @@ article a.internal {
   letter-spacing: 0.04em;
 }
 
+// トップページ(index)はワードマークと重複するので、記事タイトル見出しと
+// メタ(日付/読了時間)を隠す。他ページは従来どおり表示。
+body[data-slug="index"] {
+  .article-title,
+  .content-meta {
+    display: none;
+  }
+}
+
 // ===== 区切り：ハイライン（極細罫） =====
 hr {
   border: none;
