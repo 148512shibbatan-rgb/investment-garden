@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Investment Garden
+  pageTitle: 北浜の風見鶏
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -15,6 +15,7 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
+      title: Zen Antique
       header: Zen Kaku Gothic New
       body: Zen Kaku Gothic New
       code: JetBrains Mono

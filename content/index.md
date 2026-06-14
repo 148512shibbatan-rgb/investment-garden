@@ -1,5 +1,5 @@
 ---
-title: Investment Garden
+title: 北浜の風見鶏
 date: 2026-06-04
 publish: true
 ---
