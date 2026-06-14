@@ -30,9 +30,9 @@ publish: true
 ---
 
 ## カテゴリ目次
-- [[stocks/index|銘柄 EQUITY]] — 個別銘柄の分析
+- [[daily/index|日本株 JP MARKETS]] — 日本市場の日次まとめ
 - [[us/index|米国株 US MARKETS]] — 前夜の米国市場と日本株への示唆
 - [[themes/index|テーマ THEMES]] — 投資テーマ・構造変化
+- [[stocks/index|銘柄 EQUITY]] — 個別銘柄の分析
 - [[terms/index|用語 TERMS]] — 用語解説
 - [[books/index|書評 BOOKS]] — 投資本の要点
-- [[daily/2026-06-04|日次 DAILY]] — その日のまとめ
