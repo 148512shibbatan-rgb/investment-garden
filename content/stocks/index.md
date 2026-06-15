@@ -30,6 +30,8 @@ publish: true
 - [[SuperMicro]]
 - [[ラム・リサーチ]]
 - [[SpaceX]]
+- [[Amazon]]
+- [[Tesla]]
 
 ## 関連
 - [[AIインフラ]]
