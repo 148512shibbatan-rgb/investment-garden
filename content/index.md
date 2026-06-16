@@ -13,6 +13,7 @@ publish: true
 <iframe src="/static/sentiment.html" style="width:100%;height:480px;border:1px solid #E7E3D8;border-radius:6px;" frameborder="0" scrolling="no" loading="lazy" title="日米株センチメント指数"></iframe>
 
 ## 最新のまとめ（日米）
+- [[us/2026-06-17|2026-06-17 米国株]] — SpaceXがCursor AIを600億ドルで買収・株価+20%急騰。NASDAQは小反落、FOMC開幕
 - [[daily/2026-06-16|2026-06-16 日本株]] — 日経平均4日続伸・最高値更新。日銀1%利上げ通過の安心感でザラ場初の7万円突破
 - [[us/2026-06-16|2026-06-16 米国株]] — 米イラン停戦合意でリスクオン加速。NASDAQ+3%超・ダウが最高値更新
 - [[daily/2026-06-15|2026-06-15 日本株]] — 日経平均3297円高で最高値更新、初の6万9000円台。米イラン合意で全面買い、上げ幅歴代2位
