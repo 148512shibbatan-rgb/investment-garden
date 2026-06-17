@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>米国セクター資金フロー</title>
+<style>
+  :root{ --bg:#F7F6F2; --ink:#2b2a26; --sub:#6b6a63; --rule:#E7E3D8; --card:#fff; --green:#0F7A55; }
+  @media (prefers-color-scheme: dark){ :root{ --bg:#1d1f22; --ink:#e8e6df; --sub:#a3a199; --rule:#36383c; --card:#26282c; } }
+  *{ box-sizing:border-box; } html,body{ margin:0; }
+  body{ background:var(--bg); color:var(--ink); font-family:"Zen Kaku Gothic New",system-ui,"Hiragino Sans",sans-serif; padding:14px; }
+  .wrap{ max-width:760px; margin:0 auto; }
+  h2{ font-size:14px; margin:20px 0 8px; letter-spacing:.02em; }
+  .updated{ font-size:11px; color:var(--sub); }
+  .summary{ background:var(--card); border:1px solid var(--rule); border-left:3px solid var(--green); border-radius:8px; padding:11px 13px; font-size:13.5px; line-height:1.6; }
+
+  .periods{ display:flex; gap:6px; margin-bottom:8px; }
+  .periods button{ flex:1; font:inherit; font-size:12px; padding:6px 0; border:1px solid var(--rule); background:var(--card); color:var(--sub); border-radius:7px; cursor:pointer; }
+  .periods button.on{ background:var(--green); color:#fff; border-color:var(--green); }
+  .toggle button{ flex:none; padding:6px 16px; }
+
+  .heatmap{ display:grid; grid-template-columns:repeat(3,1fr); gap:7px; }
+  .cell{ border-radius:8px; padding:9px 8px 8px; cursor:pointer; border:2px solid transparent; text-align:left; color:#fff; min-height:64px; display:flex; flex-direction:column; justify-content:space-between; }
+  .cell .nm{ font-size:12px; font-weight:700; line-height:1.2; }
+  .cell .tk{ font-size:9.5px; opacity:.85; letter-spacing:.04em; }
+  .cell .pc{ font-size:16px; font-weight:800; }
+  .cell.lt{ color:#1c1a16; }
+  .cell.sel{ border-color:var(--ink); }
+
+  /* ヒートマップ直下の構成銘柄パネル（タップした場所のすぐ近くに出す） */
+  .cpanel{ display:none; margin-top:8px; background:var(--card); border:1px solid var(--rule); border-radius:8px; padding:11px 13px 13px; }
+  .cpanel.show{ display:block; }
+  .cpanel .ph{ display:flex; align-items:baseline; gap:9px; }
+  .cpanel .ph .nm{ font-size:16px; font-weight:800; }
+  .cpanel .ph .pc{ font-size:18px; font-weight:800; }
+  .cpanel .ph .x{ margin-left:auto; border:none; background:transparent; font-size:20px; color:var(--sub); cursor:pointer; line-height:1; }
+  .cpanel .sub{ font-size:11px; color:var(--sub); margin:1px 0 8px; }
+  .clist{ display:flex; flex-wrap:wrap; gap:6px; }
+  .clist span{ font-size:12.5px; background:var(--bg); border:1px solid var(--rule); border-radius:7px; padding:4px 9px; }
+
+  .linewrap{ position:relative; background:var(--card); border:1px solid var(--rule); border-radius:8px; padding:8px 6px 4px; }
+  .tip{ position:absolute; pointer-events:none; display:none; background:var(--card); border:1px solid var(--rule); border-radius:6px; padding:3px 7px; font-size:11px; font-weight:700; white-space:nowrap; transform:translate(-50%,-135%); z-index:5; box-shadow:0 2px 8px rgba(0,0,0,.14); }
+  .legend{ display:flex; flex-wrap:wrap; gap:5px 7px; margin-top:9px; }
+  .chip{ display:flex; align-items:center; gap:5px; font-size:11px; padding:3px 8px; border:1px solid var(--rule); border-radius:999px; background:var(--card); color:var(--ink); cursor:pointer; }
+  .chip .sw{ width:9px; height:9px; border-radius:50%; flex:none; }
+  .chip.dim{ opacity:.38; }
+  .chip.pin{ border-color:var(--green); }
+
+  .disc{ font-size:10px; color:var(--sub); margin-top:14px; border-top:1px solid var(--rule); padding-top:8px; }
+  .err{ color:var(--sub); padding:18px; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap" id="root"><div class="err">データ取得中…</div></div>
+
+<script>
+const PALETTE=["#0F7A55","#378ADD","#BA7517","#E24B4A","#7E57C2","#26A69A","#EC407A","#8D6E63","#5C6BC0","#9E9D24","#00897B"];
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function heatColor(p){
+  if(p>=3) return ["#1b7f4b",0]; if(p>=1.5) return ["#2e9e63",0]; if(p>=0.5) return ["#5fb894",0]; if(p>=0) return ["#c7e6d6",1];
+  if(p>=-0.5) return ["#f4cdcb",1]; if(p>=-1.5) return ["#e58b89",0]; if(p>=-3) return ["#d2453f",0]; return ["#a8261f",0];
+}
+const fmt=p=>(p>=0?"+":"")+p.toFixed(1)+"%";
+let DATA=null, CONS={}, period="3m", heatKey="1d", pin=null, hover=null, chartState=null, selCell=null;
+const HEAT_LABEL={"1d":"1日（前日比）","7d":"7日（直近5営業日）"};
+
+Promise.all([
+  fetch('/static/sector-returns-us.json',{cache:'no-cache'}).then(r=>r.json()),
+  fetch('/static/sector-constituents-us.json',{cache:'no-cache'}).then(r=>r.ok?r.json():{sectors:[]}).catch(()=>({sectors:[]}))
+]).then(([d,c])=>{ DATA=d; (c.sectors||[]).forEach(s=>CONS[s.etf]=s.constituents); render(); })
+.catch(()=>{ document.getElementById('root').innerHTML='<div class="err">データを取得できませんでした。</div>'; });
+
+function render(){
+  const root=document.getElementById('root'); const secs=DATA.sectors;
+  let cells="";
+  secs.forEach((s,i)=>{ const p=s.returns[heatKey]??0; const [bg,light]=heatColor(p);
+    cells+=`<button class="cell${light?' lt':''}${selCell===i?' sel':''}" style="background:${bg}" data-i="${i}">
+      <div><div class="nm">${s.name}</div><div class="tk">${s.etf}</div></div><div class="pc">${fmt(p)}</div></button>`; });
+  let leg=""; secs.forEach((s,i)=>{ leg+=`<button class="chip" data-leg="${i}"><span class="sw" style="background:${PALETTE[i%PALETTE.length]}"></span>${s.name}</button>`; });
+  root.innerHTML=`
+    <div class="updated">最終更新: ${DATA.updated} ／ ${DATA.currency}建て</div>
+    <div class="summary">${DATA.summary||""}</div>
+    <h2>騰落ヒートマップ</h2>
+    <div class="periods toggle">${[["1d","1日"],["7d","7日"]].map(([k,l])=>`<button data-h="${k}" class="${k===heatKey?'on':''}">${l}</button>`).join("")}</div>
+    <div class="heatmap">${cells}</div>
+    <div class="cpanel" id="cpanel"></div>
+    <h2>累積リターン推移</h2>
+    <div class="periods">${["1m","3m","6m","12m"].map(p=>`<button data-p="${p}" class="${p===period?'on':''}">${p.replace('m','ヶ月')}</button>`).join("")}</div>
+    <div class="linewrap"><svg id="line" viewBox="0 0 320 180" width="100%" role="img" aria-label="セクター別累積リターン"></svg><div class="tip" id="tip"></div></div>
+    <div class="legend" id="legend">${leg}</div>
+    <div class="disc">情報提供のみを目的とした指標です。投資助言ではありません。各セクターETFの調整後終値(配当込み近似)を、選択期間の起点を0%に正規化した累積リターンです。</div>`;
+  drawLine(); paintLegend(); if(selCell!==null) showPanel(selCell);
+  root.querySelectorAll('.cell').forEach(b=>b.onclick=()=>{ const i=+b.dataset.i; selCell=(selCell===i)?null:i; render(); });
+  root.querySelectorAll('.toggle button').forEach(b=>b.onclick=()=>{ heatKey=b.dataset.h; render(); });
+  root.querySelectorAll('.periods:not(.toggle) button').forEach(b=>b.onclick=()=>{ period=b.dataset.p; render(); });
+  root.querySelectorAll('.chip').forEach(b=>{ const i=+b.dataset.leg;
+    b.onclick=()=>{ pin=(pin===i)?null:i; drawLine(); paintLegend(); };
+    b.onmouseenter=()=>{ hover=i; drawLine(); paintLegend(); };
+    b.onmouseleave=()=>{ hover=null; drawLine(); paintLegend(); }; });
+  const ls=document.getElementById('line');
+  if(ls){ ls.onmousemove=onChartMove; ls.onmouseleave=()=>{ hover=null; const t=document.getElementById('tip'); if(t)t.style.display='none'; drawLine(); paintLegend(); }; }
+}
+
+function showPanel(i){
+  const p=document.getElementById('cpanel'); if(!p) return; const s=DATA.sectors[i]; const v=s.returns[heatKey]??0; const cs=CONS[s.etf]||[];
+  p.innerHTML=`<div class="ph"><span class="nm">${s.name}</span><span class="pc" style="color:${v>=0?'#0F7A55':'#E24B4A'}">${fmt(v)}</span><button class="x" id="cx">×</button></div>
+    <div class="sub">${s.etf} ／ ${HEAT_LABEL[heatKey]}</div>
+    <div class="clist">${cs.length?cs.map(n=>`<span>${n}</span>`).join(""):'<span style="border:none;color:var(--sub)">構成銘柄データなし</span>'}</div>`;
+  p.classList.add('show');
+  document.getElementById('cx').onclick=()=>{ selCell=null; render(); };
+}
+
+function activeIdx(){ return hover!==null?hover:pin; }
+function paintLegend(){ const a=activeIdx(); document.querySelectorAll('.chip').forEach((c,i)=>{ c.classList.toggle('dim', a!==null && a!==i); c.classList.toggle('pin', pin===i); }); }
+
+function monthsOf(p){ return {"1m":1,"3m":3,"6m":6,"12m":12}[p]; }
+function buildSeries(){
+  return DATA.sectors.map(s=>{ const cl=s.closes; if(!cl||cl.length<2) return [];
+    const lastD=new Date(cl[cl.length-1][0]); const start=new Date(lastD); start.setMonth(start.getMonth()-monthsOf(period));
+    const seg=cl.filter(p=>new Date(p[0])>=start); if(seg.length<2) return []; const base=seg[0][1];
+    return seg.map(p=>[new Date(p[0]).getTime(),(p[1]/base-1)*100]); });
+}
+function drawLine(){
+  const svg=document.getElementById('line'); if(!svg) return;
+  const W=320,H=180,L=30,R=8,T=8,B=18, pw=W-L-R, ph=H-T-B; const a=activeIdx();
+  const series=buildSeries();
+  let lo=Infinity,hi=-Infinity,tmin=Infinity,tmax=-Infinity;
+  series.forEach(seg=>seg.forEach(([t,v])=>{ if(v<lo)lo=v; if(v>hi)hi=v; if(t<tmin)tmin=t; if(t>tmax)tmax=t; }));
+  if(!isFinite(lo)){ svg.innerHTML=""; chartState=null; return; }
+  const pad=(hi-lo)*0.1||1; lo-=pad; hi+=pad;
+  const X=t=>L+(t-tmin)/(tmax-tmin||1)*pw, Y=v=>T+(1-(v-lo)/(hi-lo||1))*ph;
+  chartState={series,tmin,tmax,L,pw,X,Y};
+  let g="";
+  if(0>=lo&&0<=hi) g+=`<line x1="${L}" y1="${Y(0).toFixed(1)}" x2="${W-R}" y2="${Y(0).toFixed(1)}" stroke="var(--rule)" stroke-width="1"/>`;
+  [Math.round(hi),0,Math.round(lo)].forEach(v=>{ if(v<lo||v>hi)return; g+=`<text x="${L-3}" y="${(Y(v)+3).toFixed(1)}" text-anchor="end" font-size="7.5" fill="var(--sub)">${v>0?'+':''}${v}%</text>`; });
+  let lines="";
+  series.forEach((seg,i)=>{ if(seg.length<2) return; const col=PALETTE[i%PALETTE.length]; const dim=a!==null&&a!==i;
+    const pts=seg.map(([t,v])=>`${X(t).toFixed(1)},${Y(v).toFixed(1)}`).join(" ");
+    lines+=`<polyline points="${pts}" fill="none" stroke="${col}" stroke-width="${a===i?2.4:1.3}" opacity="${dim?0.16:1}"/>`;
+    if(a===i){ const last=seg[seg.length-1]; lines+=`<text x="${(X(last[0])-2).toFixed(1)}" y="${(Y(last[1])-3).toFixed(1)}" text-anchor="end" font-size="9" font-weight="700" fill="${col}">${fmt(last[1])}</text>`; } });
+  svg.innerHTML=g+lines;
+}
+function interp(seg,t){ if(t<=seg[0][0])return seg[0][1]; const n=seg.length; if(t>=seg[n-1][0])return seg[n-1][1];
+  for(let k=1;k<n;k++){ if(seg[k][0]>=t){ const [t0,v0]=seg[k-1],[t1,v1]=seg[k]; const r=(t-t0)/((t1-t0)||1); return v0+(v1-v0)*r; } } return seg[n-1][1]; }
+function onChartMove(e){
+  const cs=chartState, svg=document.getElementById('line'); if(!cs||!svg) return;
+  const pt=svg.createSVGPoint(); pt.x=e.clientX; pt.y=e.clientY;
+  const loc=pt.matrixTransform(svg.getScreenCTM().inverse());
+  const t=cs.tmin+clamp((loc.x-cs.L)/cs.pw,0,1)*(cs.tmax-cs.tmin);
+  let best=null,bd=Infinity,bv=null;
+  cs.series.forEach((seg,i)=>{ if(seg.length<2)return; const v=interp(seg,t); const d=Math.abs(cs.Y(v)-loc.y); if(d<bd){bd=d;best=i;bv=v;} });
+  if(best===null) return;
+  hover=best; drawLine(); paintLegend();
+  const tip=document.getElementById('tip'); const rect=svg.getBoundingClientRect();
+  const px=(cs.X(t)/320)*rect.width, py=(cs.Y(bv)/180)*rect.height;
+  tip.style.left=px+'px'; tip.style.top=py+'px'; tip.style.display='block';
+  tip.textContent=`${DATA.sectors[best].name} ${fmt(bv)}`;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "_note": "各ETFの主要構成銘柄(名前のみ・MVPのドラフト)。半年〜1年に1回手動で見直す。",
+  "sectors": [
+    { "etf": "XLK", "constituents": ["Apple", "Microsoft", "NVIDIA", "Broadcom", "Oracle", "Salesforce", "AMD", "Cisco"] },
+    { "etf": "XLC", "constituents": ["Alphabet", "Meta", "Netflix", "Walt Disney", "T-Mobile US", "Comcast", "AT&T", "Verizon"] },
+    { "etf": "XLY", "constituents": ["Amazon", "Tesla", "Home Depot", "McDonald's", "Booking", "Lowe's", "Nike", "Starbucks"] },
+    { "etf": "XLP", "constituents": ["Procter & Gamble", "Costco", "Walmart", "Coca-Cola", "PepsiCo", "Philip Morris", "Mondelez", "Colgate-Palmolive"] },
+    { "etf": "XLV", "constituents": ["Eli Lilly", "UnitedHealth", "Johnson & Johnson", "AbbVie", "Merck", "Abbott", "Pfizer", "Thermo Fisher"] },
+    { "etf": "XLF", "constituents": ["Berkshire Hathaway", "JPMorgan Chase", "Visa", "Mastercard", "Bank of America", "Wells Fargo", "Goldman Sachs", "Morgan Stanley"] },
+    { "etf": "XLI", "constituents": ["GE Aerospace", "Caterpillar", "RTX", "Honeywell", "Union Pacific", "Boeing", "Deere", "Lockheed Martin"] },
+    { "etf": "XLE", "constituents": ["ExxonMobil", "Chevron", "ConocoPhillips", "EOG Resources", "Schlumberger", "Marathon Petroleum", "Williams", "Phillips 66"] },
+    { "etf": "XLB", "constituents": ["Linde", "Sherwin-Williams", "Freeport-McMoRan", "Newmont", "Ecolab", "Air Products", "Dow", "Nucor"] },
+    { "etf": "XLU", "constituents": ["NextEra Energy", "Southern", "Duke Energy", "Constellation Energy", "American Electric Power", "Sempra", "Dominion Energy", "Exelon"] },
+    { "etf": "XLRE", "constituents": ["Prologis", "American Tower", "Equinix", "Welltower", "Digital Realty", "Simon Property", "Public Storage", "Realty Income"] }
+  ]
+}
