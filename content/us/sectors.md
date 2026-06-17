@@ -2,6 +2,7 @@
 title: 米国セクター US SECTORS
 date: 2026-06-16
 tags: [MOC]
+aliases: [us-sectors]
 publish: true
 ---
 
