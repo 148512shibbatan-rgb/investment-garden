@@ -131,8 +131,22 @@ function drawLine(){
   const X=t=>L+(t-tmin)/(tmax-tmin||1)*pw, Y=v=>T+(1-(v-lo)/(hi-lo||1))*ph;
   chartState={series,tmin,tmax,L,pw,X,Y};
   let g="";
-  if(0>=lo&&0<=hi) g+=`<line x1="${L}" y1="${Y(0).toFixed(1)}" x2="${W-R}" y2="${Y(0).toFixed(1)}" stroke="var(--rule)" stroke-width="1"/>`;
-  [Math.round(hi),0,Math.round(lo)].forEach(v=>{ if(v<lo||v>hi)return; g+=`<text x="${L-3}" y="${(Y(v)+3).toFixed(1)}" text-anchor="end" font-size="7.5" fill="var(--sub)">${v>0?'+':''}${v}%</text>`; });
+  // y軸: きりの良い間隔(5/25/50等)で横線＋％ラベル
+  const rng=hi-lo, raw=rng/4, p10=Math.pow(10,Math.floor(Math.log10(raw||1))), nn=raw/p10;
+  const step=(nn<1.5?1:nn<3.5?2.5:nn<7.5?5:10)*p10;
+  for(let v=Math.ceil(lo/step)*step; v<=hi; v+=step){
+    const yy=Y(v), zero=Math.abs(v)<1e-9;
+    g+=`<line x1="${L}" y1="${yy.toFixed(1)}" x2="${W-R}" y2="${yy.toFixed(1)}" stroke="var(--rule)" stroke-width="${zero?1.2:0.7}" opacity="${zero?1:0.7}"/>`;
+    g+=`<text x="${L-3}" y="${(yy+2.8).toFixed(1)}" text-anchor="end" font-size="7.5" fill="var(--sub)">${v>0?'+':''}${Math.round(v)}%</text>`;
+  }
+  // x軸: 月ラベル(＋薄い縦線)
+  const mf=new Date(tmin); let mm=new Date(mf.getFullYear(),mf.getMonth(),1);
+  if(mm.getTime()<tmin) mm.setMonth(mm.getMonth()+1);
+  const mons=[]; while(mm.getTime()<=tmax){ mons.push(new Date(mm)); mm.setMonth(mm.getMonth()+1); }
+  const ms=Math.max(1,Math.ceil(mons.length/6));
+  mons.forEach((dt,idx)=>{ if(idx%ms!==0) return; const xx=X(dt.getTime());
+    g+=`<line x1="${xx.toFixed(1)}" y1="${T}" x2="${xx.toFixed(1)}" y2="${(H-B).toFixed(1)}" stroke="var(--rule)" stroke-width="0.5" opacity="0.5"/>`;
+    g+=`<text x="${xx.toFixed(1)}" y="${H-4}" text-anchor="middle" font-size="7" fill="var(--sub)">${dt.getMonth()+1}月</text>`; });
   let lines="";
   series.forEach((seg,i)=>{ if(seg.length<2) return; const col=PALETTE[i%PALETTE.length]; const dim=a!==null&&a!==i;
     const pts=seg.map(([t,v])=>`${X(t).toFixed(1)},${Y(v).toFixed(1)}`).join(" ");
