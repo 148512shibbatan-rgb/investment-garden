@@ -95,6 +95,21 @@ hr {
   font-weight: 700;
 }
 
+// セクター項目(ルートのファイル)をフォルダ風（緑＋シェブロン）に見せる
+.explorer a.nav-file-title[href*="us-sectors"],
+.explorer a.nav-file-title[href*="jp-sectors"] {
+  color: var(--secondary);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.explorer a.nav-file-title[href*="us-sectors"]::before,
+.explorer a.nav-file-title[href*="jp-sectors"]::before {
+  content: "›";
+  margin-right: 0.4em;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
 // バックリンクを上質に
 .backlinks .backlink {
   background: var(--card, #fff);
