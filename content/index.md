@@ -15,8 +15,8 @@ publish: true
 ## セクター資金フロー
 
 いまどこへ資金が向かっているかを、ヒートマップと累積リターンで見られます。
-- [[us/sectors|米国セクター（11業種）]]
-- [[daily/sectors|日本セクター（17業種）]]
+- [[us-sectors|米国セクター（11業種）]]
+- [[jp-sectors|日本セクター（17業種）]]
 
 ## 最近の市場まとめ
 
@@ -44,8 +44,8 @@ publish: true
 ## カテゴリ目次
 - [[daily/index|日本株 JP MARKETS]] — 日本市場の日次まとめ
 - [[us/index|米国株 US MARKETS]] — 前夜の米国市場と日本株への示唆
-- [[us/sectors|米国セクター US SECTORS]] — 11業種の資金フロー（ヒートマップ＋推移）
-- [[daily/sectors|日本セクター JP SECTORS]] — 東証17業種の資金フロー（ヒートマップ＋推移）
+- [[us-sectors|米国セクター US SECTORS]] — 11業種の資金フロー（ヒートマップ＋推移）
+- [[jp-sectors|日本セクター JP SECTORS]] — 東証17業種の資金フロー（ヒートマップ＋推移）
 - [[themes/index|テーマ THEMES]] — 投資テーマ・構造変化
 - [[stocks/index|銘柄 EQUITY]] — 個別銘柄の分析
 - [[books/index|書評 BOOKS]] — 投資本の要点

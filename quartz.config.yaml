@@ -126,7 +126,7 @@ plugins:
   - source: github:quartz-community/explorer
     enabled: true
     options:
-      sortFn: '(a, b) => { const order = { daily:0, us:1, themes:2, stocks:3, books:4, terms:5 }; const ao = order[a.slugSegment], bo = order[b.slugSegment]; if (ao !== undefined && bo !== undefined) return ao - bo; if (!a.isFolder && !b.isFolder || a.isFolder && b.isFolder) { return (a.displayName || "").localeCompare(b.displayName || "", undefined, { numeric: true }); } return (!a.isFolder && b.isFolder) ? 1 : -1; }'
+      sortFn: '(a, b) => { const order = { daily:0, "jp-sectors":0.5, us:1, "us-sectors":1.5, themes:2, stocks:3, books:4, terms:5 }; const ao = order[a.slugSegment], bo = order[b.slugSegment]; if (ao !== undefined && bo !== undefined) return ao - bo; if (!a.isFolder && !b.isFolder || a.isFolder && b.isFolder) { return (a.displayName || "").localeCompare(b.displayName || "", undefined, { numeric: true }); } return (!a.isFolder && b.isFolder) ? 1 : -1; }'
     layout:
       position: left
       priority: 50

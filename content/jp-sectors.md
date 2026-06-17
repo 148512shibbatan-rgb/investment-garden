@@ -2,7 +2,7 @@
 title: 日本セクター JP SECTORS
 date: 2026-06-17
 tags: [MOC]
-aliases: [jp-sectors]
+aliases: [daily/sectors]
 publish: true
 ---
 
