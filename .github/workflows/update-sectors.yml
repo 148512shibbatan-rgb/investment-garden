@@ -1,13 +1,13 @@
-  name: update-sectors
+name: update-sectors
   on:
     schedule:
       - cron: "30 23 * * *"
     workflow_dispatch: {}
   permissions:
-    contents: write
+    contents: write   
   concurrency:
     group: update-sectors
-    cancel-in-progress: false   
+    cancel-in-progress: false
   jobs:
     update:
       runs-on: ubuntu-latest
@@ -19,15 +19,11 @@
         - run: pip install -r requirements.txt
         - run: python sector_returns.py --market us
         - run: python sector_returns.py --market jp
-        - name: Commit if changed
+        - name: Commit and push
           run: |
-            git config user.name  "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            if git diff --quiet -- quartz/static/sector-returns-us.json 
-  quartz/static/sector-returns-jp.json; then
-              echo "no change"  
-            else
-              git add quartz/static/sector-returns-us.json quartz/static/sector-returns-jp.json
-              git commit -m "chore(sectors): update sector-returns [skip ci]"
-              git push
-            fi 
+            git config user.name github-actions
+            git config user.email actions@github.com
+            git add quartz/static/sector-returns-us.json
+            git add quartz/static/sector-returns-jp.json
+            git commit -m "update sectors [skip ci]" || echo no-change
+            git push
