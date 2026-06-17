@@ -32,6 +32,7 @@ publish: true
 - [[SpaceX]]
 - [[Amazon]]
 - [[Tesla]]
+- [[Microsoft]]
 - [[イビデン]]
 - [[古河電工]]
 
