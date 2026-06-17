@@ -1,14 +1,14 @@
 name: update-sectors
-  on:
+on:
     schedule:
       - cron: "30 23 * * *"
     workflow_dispatch: {}
-  permissions:
+permissions:
     contents: write   
-  concurrency:
+concurrency:
     group: update-sectors
     cancel-in-progress: false
-  jobs:
+jobs:
     update:
       runs-on: ubuntu-latest
       steps:
