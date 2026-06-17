@@ -32,6 +32,8 @@ publish: true
 - [[SpaceX]]
 - [[Amazon]]
 - [[Tesla]]
+- [[イビデン]]
+- [[古河電工]]
 
 ## 関連
 - [[AIインフラ]]
