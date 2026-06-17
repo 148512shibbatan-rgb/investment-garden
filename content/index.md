@@ -12,6 +12,10 @@ publish: true
 
 <iframe src="/static/sentiment.html" style="width:100%;height:480px;border:1px solid #E7E3D8;border-radius:6px;" frameborder="0" scrolling="no" loading="lazy" title="日米株センチメント指数"></iframe>
 
+## セクター資金フロー
+
+米国11業種に、いまどこへ資金が向かっているかをヒートマップと累積リターンで見られます → [[us-sectors|米国セクター（資金フロー）]]
+
 ## 最近の市場まとめ
 
 ### 米国株（直近5営業日）
@@ -38,6 +42,7 @@ publish: true
 ## カテゴリ目次
 - [[daily/index|日本株 JP MARKETS]] — 日本市場の日次まとめ
 - [[us/index|米国株 US MARKETS]] — 前夜の米国市場と日本株への示唆
+- [[us-sectors|米国セクター US SECTORS]] — 11業種の資金フロー（ヒートマップ＋推移）
 - [[themes/index|テーマ THEMES]] — 投資テーマ・構造変化
 - [[stocks/index|銘柄 EQUITY]] — 個別銘柄の分析
 - [[books/index|書評 BOOKS]] — 投資本の要点
