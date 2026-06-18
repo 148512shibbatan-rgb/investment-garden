@@ -132,3 +132,52 @@ footer {
     text-align: center;
   }
 }
+
+// ===== 市場概要テーブルのスマホ対応（案C） =====
+// スマホ幅では4列目(メモ列)を隠して表の潰れを防ぐ。
+// メモは表の下の .market-comments に縦リストで表示する（新しい記事から）。
+@media #{$mobile} {
+  article table th:nth-child(4),
+  article table td:nth-child(4) {
+    display: none;
+  }
+}
+
+// 市場概要のメモを「ラベル＋本文」の行で罫線区切りに並べるリスト風デザイン
+.market-comments {
+  margin: 1.2rem 0 1.6rem;
+
+  h4 {
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--secondary);
+  }
+
+  .mc-row {
+    display: flex;
+    gap: 0.8rem;
+    align-items: baseline;
+    padding: 0.55rem 0;
+    border-top: 1px solid var(--lightgray);
+
+    &:last-child {
+      border-bottom: 1px solid var(--lightgray);
+    }
+  }
+
+  .mc-label {
+    flex: 0 0 7em;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--secondary);
+  }
+
+  .mc-text {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--darkgray);
+  }
+}
