@@ -38,6 +38,8 @@ publish: true
 - [[JX金属]]
 - [[Meta]]
 - [[CoreWeave]]
+- [[Qualcomm]]
+- [[Arm]]
 
 ## 関連
 - [[AIインフラ]]
