@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-23T23:53:51Z",
-  "as_of": "2026-06-24",
+  "generated_at": "2026-06-25T00:07:53Z",
+  "as_of": "2026-06-25",
   "markets": {
     "JP": {
-      "score": 62.5,
+      "score": 62.8,
       "band": 4,
       "band_label": "強気",
       "n_indicators": 1,
@@ -13,15 +13,11 @@
         {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
-          "percentile": 69.8,
+          "percentile": 68.5,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-02-19",
-          "score": 42.3
-        },
         {
           "date": "2026-02-20",
           "score": 42.8
@@ -376,12 +372,16 @@
         },
         {
           "date": "2026-06-24",
-          "score": 62.5
+          "score": 62.3
+        },
+        {
+          "date": "2026-06-25",
+          "score": 62.8
         }
       ]
     },
     "US": {
-      "score": 63.3,
+      "score": 60.6,
       "band": 4,
       "band_label": "強気",
       "n_indicators": 2,
@@ -390,21 +390,17 @@
         {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
-          "percentile": 50.8,
+          "percentile": 49.6,
           "invert": false
         },
         {
           "name": "stocks_vs_bonds",
           "label": "株 vs 債 20日リターン差",
-          "percentile": 19.4,
+          "percentile": 14.1,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-02-18",
-          "score": 26.3
-        },
         {
           "date": "2026-02-19",
           "score": 27.0
@@ -759,16 +755,20 @@
         },
         {
           "date": "2026-06-23",
-          "score": 63.3
+          "score": 60.0
+        },
+        {
+          "date": "2026-06-24",
+          "score": 60.6
         }
       ]
     },
     "GLOBAL": {
-      "score": 62.9,
+      "score": 61.7,
       "band": 4,
       "band_label": "強気",
-      "jp": 62.5,
-      "us": 63.3
+      "jp": 62.8,
+      "us": 60.6
     }
   }
 }
