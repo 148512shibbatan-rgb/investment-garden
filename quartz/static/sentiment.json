@@ -1,39 +1,23 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-27T23:58:46Z",
-  "as_of": "2026-06-26",
+  "generated_at": "2026-06-29T00:05:23Z",
+  "as_of": "2026-06-29",
   "markets": {
     "JP": {
-      "score": 60.9,
+      "score": 60.1,
       "band": 4,
       "band_label": "強気",
-      "n_indicators": 3,
+      "n_indicators": 1,
       "stale": false,
       "components": [
         {
-          "name": "nikkei_vi",
-          "label": "日経VI(代理)",
-          "percentile": 9.7,
-          "invert": true
-        },
-        {
-          "name": "n225_mom125",
-          "label": "日経225 vs 125日線",
-          "percentile": 93.8,
-          "invert": false
-        },
-        {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
-          "percentile": 72.0,
+          "percentile": 70.0,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-02-23",
-          "score": 44.3
-        },
         {
           "date": "2026-02-24",
           "score": 46.5
@@ -389,6 +373,10 @@
         {
           "date": "2026-06-26",
           "score": 60.9
+        },
+        {
+          "date": "2026-06-29",
+          "score": 60.1
         }
       ]
     },
@@ -776,10 +764,10 @@
       ]
     },
     "GLOBAL": {
-      "score": 55.1,
+      "score": 54.8,
       "band": 3,
       "band_label": "中立",
-      "jp": 60.9,
+      "jp": 60.1,
       "us": 49.4
     }
   }
