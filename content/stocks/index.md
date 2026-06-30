@@ -40,6 +40,8 @@ publish: true
 - [[CoreWeave]]
 - [[Qualcomm]]
 - [[Arm]]
+- [[KLA]]
+- [[Applied Materials]]
 
 ## 関連
 - [[AIインフラ]]
