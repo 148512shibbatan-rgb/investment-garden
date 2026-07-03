@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-02T00:04:19Z",
-  "as_of": "2026-07-02",
+  "generated_at": "2026-07-03T00:03:19Z",
+  "as_of": "2026-07-03",
   "markets": {
     "JP": {
-      "score": 58.0,
+      "score": 58.5,
       "band": 3,
       "band_label": "中立",
       "n_indicators": 1,
@@ -13,15 +13,11 @@
         {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
-          "percentile": 72.4,
+          "percentile": 60.3,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-02-27",
-          "score": 59.5
-        },
         {
           "date": "2026-03-02",
           "score": 61.2
@@ -372,16 +368,20 @@
         },
         {
           "date": "2026-07-01",
-          "score": 58.5
+          "score": 58.8
         },
         {
           "date": "2026-07-02",
-          "score": 58.0
+          "score": 58.5
+        },
+        {
+          "date": "2026-07-03",
+          "score": 58.5
         }
       ]
     },
     "US": {
-      "score": 48.7,
+      "score": 52.4,
       "band": 3,
       "band_label": "中立",
       "n_indicators": 2,
@@ -390,21 +390,17 @@
         {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
-          "percentile": 66.7,
+          "percentile": 65.7,
           "invert": false
         },
         {
           "name": "stocks_vs_bonds",
           "label": "株 vs 債 20日リターン差",
-          "percentile": 23.6,
+          "percentile": 23.8,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-02-26",
-          "score": 27.8
-        },
         {
           "date": "2026-02-27",
           "score": 25.6
@@ -759,16 +755,20 @@
         },
         {
           "date": "2026-07-01",
-          "score": 48.7
+          "score": 50.7
+        },
+        {
+          "date": "2026-07-02",
+          "score": 52.4
         }
       ]
     },
     "GLOBAL": {
-      "score": 53.4,
+      "score": 55.5,
       "band": 3,
       "band_label": "中立",
-      "jp": 58.0,
-      "us": 48.7
+      "jp": 58.5,
+      "us": 52.4
     }
   }
 }
