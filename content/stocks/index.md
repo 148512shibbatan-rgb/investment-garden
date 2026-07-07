@@ -42,6 +42,7 @@ publish: true
 - [[Arm]]
 - [[KLA]]
 - [[Applied Materials]]
+- [[Samsung]]
 
 ## 関連
 - [[AIインフラ]]
