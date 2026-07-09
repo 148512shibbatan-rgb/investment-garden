@@ -43,6 +43,7 @@ publish: true
 - [[KLA]]
 - [[Applied Materials]]
 - [[Samsung]]
+- [[SK Hynix]]
 
 ## 関連
 - [[AIインフラ]]
