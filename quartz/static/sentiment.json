@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-10T00:01:33Z",
+  "generated_at": "2026-07-10T23:55:09Z",
   "as_of": "2026-07-10",
   "markets": {
     "JP": {
-      "score": 53.0,
+      "score": 52.8,
       "band": 3,
       "band_label": "中立",
       "n_indicators": 1,
@@ -13,7 +13,7 @@
         {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
-          "percentile": 67.5,
+          "percentile": 61.3,
           "invert": false
         }
       ],
@@ -372,16 +372,16 @@
         },
         {
           "date": "2026-07-09",
-          "score": 53.2
+          "score": 53.1
         },
         {
           "date": "2026-07-10",
-          "score": 53.0
+          "score": 52.8
         }
       ]
     },
     "US": {
-      "score": 66.1,
+      "score": 69.2,
       "band": 4,
       "band_label": "強気",
       "n_indicators": 2,
@@ -390,21 +390,17 @@
         {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
-          "percentile": 71.8,
+          "percentile": 76.4,
           "invert": false
         },
         {
           "name": "stocks_vs_bonds",
           "label": "株 vs 債 20日リターン差",
-          "percentile": 61.9,
+          "percentile": 78.6,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-03-06",
-          "score": 20.2
-        },
         {
           "date": "2026-03-09",
           "score": 18.4
@@ -651,99 +647,99 @@
         },
         {
           "date": "2026-06-02",
-          "score": 85.7
+          "score": 85.6
         },
         {
           "date": "2026-06-03",
-          "score": 85.3
+          "score": 85.1
         },
         {
           "date": "2026-06-04",
-          "score": 84.7
+          "score": 84.4
         },
         {
           "date": "2026-06-05",
-          "score": 78.4
+          "score": 77.8
         },
         {
           "date": "2026-06-08",
-          "score": 73.3
+          "score": 72.5
         },
         {
           "date": "2026-06-09",
-          "score": 66.4
+          "score": 65.5
         },
         {
           "date": "2026-06-10",
-          "score": 57.9
+          "score": 57.1
         },
         {
           "date": "2026-06-11",
-          "score": 51.2
+          "score": 50.4
         },
         {
           "date": "2026-06-12",
-          "score": 51.6
+          "score": 50.8
         },
         {
           "date": "2026-06-15",
-          "score": 54.8
+          "score": 53.9
         },
         {
           "date": "2026-06-16",
-          "score": 57.9
+          "score": 57.0
         },
         {
           "date": "2026-06-17",
-          "score": 61.8
+          "score": 60.8
         },
         {
           "date": "2026-06-18",
-          "score": 65.6
+          "score": 64.5
         },
         {
           "date": "2026-06-19",
-          "score": 67.5
+          "score": 66.4
         },
         {
           "date": "2026-06-22",
-          "score": 65.1
+          "score": 64.0
         },
         {
           "date": "2026-06-23",
-          "score": 60.9
+          "score": 60.0
         },
         {
           "date": "2026-06-24",
-          "score": 58.3
+          "score": 57.4
         },
         {
           "date": "2026-06-25",
-          "score": 53.4
+          "score": 52.6
         },
         {
           "date": "2026-06-26",
-          "score": 48.4
+          "score": 47.7
         },
         {
           "date": "2026-06-29",
-          "score": 45.7
+          "score": 45.3
         },
         {
           "date": "2026-06-30",
-          "score": 48.2
+          "score": 47.9
         },
         {
           "date": "2026-07-01",
-          "score": 50.9
+          "score": 50.7
         },
         {
           "date": "2026-07-02",
-          "score": 54.2
+          "score": 54.1
         },
         {
           "date": "2026-07-03",
-          "score": 58.4
+          "score": 58.3
         },
         {
           "date": "2026-07-06",
@@ -751,7 +747,7 @@
         },
         {
           "date": "2026-07-07",
-          "score": 63.9
+          "score": 64.0
         },
         {
           "date": "2026-07-08",
@@ -759,16 +755,20 @@
         },
         {
           "date": "2026-07-09",
-          "score": 66.1
+          "score": 67.8
+        },
+        {
+          "date": "2026-07-10",
+          "score": 69.2
         }
       ]
     },
     "GLOBAL": {
-      "score": 59.5,
-      "band": 3,
-      "band_label": "中立",
-      "jp": 53.0,
-      "us": 66.1
+      "score": 61.0,
+      "band": 4,
+      "band_label": "強気",
+      "jp": 52.8,
+      "us": 69.2
     }
   }
 }
