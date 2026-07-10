@@ -44,6 +44,7 @@ publish: true
 - [[Applied Materials]]
 - [[Samsung]]
 - [[SK Hynix]]
+- [[Delta Air Lines]]
 
 ## 関連
 - [[AIインフラ]]
