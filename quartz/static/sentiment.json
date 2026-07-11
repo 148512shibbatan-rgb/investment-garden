@@ -1,15 +1,27 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-10T23:55:09Z",
+  "generated_at": "2026-07-11T23:51:59Z",
   "as_of": "2026-07-10",
   "markets": {
     "JP": {
       "score": 52.8,
       "band": 3,
       "band_label": "中立",
-      "n_indicators": 1,
+      "n_indicators": 3,
       "stale": false,
       "components": [
+        {
+          "name": "nikkei_vi",
+          "label": "日経VI(代理)",
+          "percentile": 15.1,
+          "invert": true
+        },
+        {
+          "name": "n225_mom125",
+          "label": "日経225 vs 125日線",
+          "percentile": 80.8,
+          "invert": false
+        },
         {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
