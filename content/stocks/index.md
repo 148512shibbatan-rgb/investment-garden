@@ -46,6 +46,8 @@ publish: true
 - [[SK Hynix]]
 - [[Delta Air Lines]]
 - [[ファーストリテイリング]]
+- [[IBM]]
+- [[Goldman Sachs]]
 
 ## 関連
 - [[AIインフラ]]
