@@ -45,6 +45,7 @@ publish: true
 - [[Samsung]]
 - [[SK Hynix]]
 - [[Delta Air Lines]]
+- [[ファーストリテイリング]]
 
 ## 関連
 - [[AIインフラ]]
