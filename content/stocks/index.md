@@ -48,6 +48,8 @@ publish: true
 - [[ファーストリテイリング]]
 - [[IBM]]
 - [[Goldman Sachs]]
+- [[ASML]]
+- [[レーザーテック]]
 
 ## 関連
 - [[AIインフラ]]
