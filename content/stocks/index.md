@@ -50,6 +50,7 @@ publish: true
 - [[Goldman Sachs]]
 - [[ASML]]
 - [[レーザーテック]]
+- [[PayPal]]
 
 ## 関連
 - [[AIインフラ]]
