@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-14T23:51:02Z",
-  "as_of": "2026-07-15",
+  "generated_at": "2026-07-15T23:56:10Z",
+  "as_of": "2026-07-16",
   "markets": {
     "JP": {
-      "score": 53.1,
+      "score": 53.4,
       "band": 3,
       "band_label": "中立",
       "n_indicators": 1,
@@ -13,15 +13,11 @@
         {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
-          "percentile": 63.1,
+          "percentile": 58.9,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-03-12",
-          "score": 47.5
-        },
         {
           "date": "2026-03-13",
           "score": 49.7
@@ -372,16 +368,20 @@
         },
         {
           "date": "2026-07-14",
-          "score": 52.5
+          "score": 52.7
         },
         {
           "date": "2026-07-15",
           "score": 53.1
+        },
+        {
+          "date": "2026-07-16",
+          "score": 53.4
         }
       ]
     },
     "US": {
-      "score": 72.6,
+      "score": 74.0,
       "band": 4,
       "band_label": "強気",
       "n_indicators": 2,
@@ -390,21 +390,17 @@
         {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
-          "percentile": 68.7,
+          "percentile": 72.6,
           "invert": false
         },
         {
           "name": "stocks_vs_bonds",
           "label": "株 vs 債 20日リターン差",
-          "percentile": 60.9,
+          "percentile": 41.7,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-03-11",
-          "score": 17.6
-        },
         {
           "date": "2026-03-12",
           "score": 16.0
@@ -759,16 +755,20 @@
         },
         {
           "date": "2026-07-14",
-          "score": 72.6
+          "score": 72.0
+        },
+        {
+          "date": "2026-07-15",
+          "score": 74.0
         }
       ]
     },
     "GLOBAL": {
-      "score": 62.8,
+      "score": 63.7,
       "band": 4,
       "band_label": "強気",
-      "jp": 53.1,
-      "us": 72.6
+      "jp": 53.4,
+      "us": 74.0
     }
   }
 }
