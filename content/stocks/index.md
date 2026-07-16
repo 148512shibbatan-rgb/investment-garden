@@ -53,6 +53,8 @@ publish: true
 - [[ASML]]
 - [[レーザーテック]]
 - [[PayPal]]
+- [[Netflix]]
+- [[Western Digital]]
 
 ## 関連
 - [[AIインフラ]]
