@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T23:55:41Z",
+  "generated_at": "2026-07-17T23:49:02Z",
   "as_of": "2026-07-17",
   "markets": {
     "JP": {
-      "score": 53.1,
+      "score": 51.5,
       "band": 3,
       "band_label": "中立",
       "n_indicators": 1,
@@ -372,16 +372,16 @@
         },
         {
           "date": "2026-07-16",
-          "score": 53.4
+          "score": 52.1
         },
         {
           "date": "2026-07-17",
-          "score": 53.1
+          "score": 51.5
         }
       ]
     },
     "US": {
-      "score": 72.9,
+      "score": 68.3,
       "band": 4,
       "band_label": "強気",
       "n_indicators": 2,
@@ -390,21 +390,17 @@
         {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
-          "percentile": 64.9,
+          "percentile": 50.8,
           "invert": false
         },
         {
           "name": "stocks_vs_bonds",
           "label": "株 vs 債 20日リターン差",
-          "percentile": 47.4,
+          "percentile": 41.1,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-03-13",
-          "score": 14.8
-        },
         {
           "date": "2026-03-16",
           "score": 14.9
@@ -759,16 +755,20 @@
         },
         {
           "date": "2026-07-16",
-          "score": 72.9
+          "score": 71.2
+        },
+        {
+          "date": "2026-07-17",
+          "score": 68.3
         }
       ]
     },
     "GLOBAL": {
-      "score": 63.0,
-      "band": 4,
-      "band_label": "強気",
-      "jp": 53.1,
-      "us": 72.9
+      "score": 59.9,
+      "band": 3,
+      "band_label": "中立",
+      "jp": 51.5,
+      "us": 68.3
     }
   }
 }
