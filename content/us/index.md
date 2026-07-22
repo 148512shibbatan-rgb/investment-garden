@@ -10,6 +10,7 @@ publish: true
 記事は最新順に左の Explorer から辿れます。
 
 ## 最新の米国株まとめ
+- [[us/2026-07-23]] — AlphabetはCloud+82%も設備投資急拡大を嫌気・Tesla大幅EPS未達、NASDAQ-0.6%で引け後にテック株下落
 - [[us/2026-07-22]] — Micron+12%・Intel+8%でメモリー株が市場をけん引、半導体全面高でNASDAQ+1.3%。水曜はAlphabet・Tesla決算が焦点
 - [[us/2026-07-21]] — フーシ派海上封鎖でダウ307ドル安・原油急騰も、Alphabet+2.9%・チップ株反発でNASDAQは横ばい。今週はAlphabet・Tesla決算が焦点
 - [[us/2026-07-18]] — Moonshot「Kimi K3」でDeepSeek再来・半導体SOXがベアマーケット入り、Netflix急落重なりNASDAQ週間-2.9%
@@ -18,7 +19,6 @@ publish: true
 - [[us/2026-07-15]] — CPI年率3.5%に急低下で半導体全面高・NASDAQ+0.91%。IBM-25%急落がダウの重荷に
 - [[us/2026-07-14]] — 米イラン緊張再燃で原油+5%急騰・半導体全面安。NASDAQ -1.55%、SK Hynixが上場後最大の-15%急落
 - [[us/2026-07-11]] — SK Hynix上場初日+13%・Meta AIクラウド参入表明でNASDAQ続伸、デルタ航空も好決算で3指数そろって上昇
-- [[us/2026-07-10]] — Micron 2500億ドル投資表明・SK Hynix米国上場でAIメモリ需要を再確認。半導体全面高でNASDAQ+1.30%
 
 ## 関連
 - [[AIインフラ]]
