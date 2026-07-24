@@ -55,6 +55,7 @@ publish: true
 - [[PayPal]]
 - [[Netflix]]
 - [[Western Digital]]
+- [[Sandisk]]
 
 ## 関連
 - [[AIインフラ]]
