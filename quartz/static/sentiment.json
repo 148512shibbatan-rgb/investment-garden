@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-25T00:00:14Z",
+  "generated_at": "2026-07-25T23:57:19Z",
   "as_of": "2026-07-24",
   "markets": {
     "JP": {
@@ -381,26 +381,42 @@
       ]
     },
     "US": {
-      "score": 59.0,
+      "score": 57.6,
       "band": 3,
       "band_label": "中立",
-      "n_indicators": 2,
+      "n_indicators": 4,
       "stale": false,
       "components": [
         {
+          "name": "vix",
+          "label": "VIX",
+          "percentile": 34.9,
+          "invert": true
+        },
+        {
+          "name": "hy_oas",
+          "label": "ハイイールドOAS",
+          "percentile": 74.7,
+          "invert": true
+        },
+        {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
-          "percentile": 38.9,
+          "percentile": 39.3,
           "invert": false
         },
         {
           "name": "stocks_vs_bonds",
           "label": "株 vs 債 20日リターン差",
-          "percentile": 65.3,
+          "percentile": 65.9,
           "invert": false
         }
       ],
       "history": [
+        {
+          "date": "2026-03-20",
+          "score": 12.6
+        },
         {
           "date": "2026-03-23",
           "score": 12.7
@@ -756,19 +772,15 @@
         {
           "date": "2026-07-23",
           "score": 57.6
-        },
-        {
-          "date": "2026-07-24",
-          "score": 59.0
         }
       ]
     },
     "GLOBAL": {
-      "score": 50.5,
+      "score": 49.8,
       "band": 3,
       "band_label": "中立",
       "jp": 42.0,
-      "us": 59.0
+      "us": 57.6
     }
   }
 }
