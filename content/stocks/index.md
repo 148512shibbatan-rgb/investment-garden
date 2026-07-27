@@ -56,6 +56,8 @@ publish: true
 - [[Netflix]]
 - [[Western Digital]]
 - [[Sandisk]]
+- [[ディスコ]]
+- [[SUMCO]]
 
 ## 関連
 - [[AIインフラ]]
