@@ -10,6 +10,7 @@ publish: true
 記事は最新順に左の Explorer から辿れます。
 
 ## 最新の米国株まとめ
+- [[us/2026-07-28]] — 原油急落でダウ下支え、CXMT上場でNVIDIA約5%安・半導体全面安
 - [[us/2026-07-25]] — イラン爆撃示唆・Sandisk急落で波乱もApple+3.5%がダウを下支え、S&P500+0.05%・NASDAQ -0.64%
 - [[us/2026-07-24]] — Alphabet・Tesla決算嫌気で大幅安、原油100ドル突破。NASDAQ -2.15%・S&P500 -1.21%
 - [[us/2026-07-23]] — AlphabetはCloud+82%も設備投資急拡大を嫌気・Tesla大幅EPS未達、NASDAQ-0.6%で引け後にテック株下落
@@ -18,7 +19,6 @@ publish: true
 - [[us/2026-07-18]] — Moonshot「Kimi K3」でDeepSeek再来・半導体SOXがベアマーケット入り、Netflix急落重なりNASDAQ週間-2.9%
 - [[us/2026-07-17]] — TSMC過去最高益も設備投資拡大を嫌気・チップ株全面安、Netflix引け後-8.5%でNASDAQ -1.47%
 - [[us/2026-07-16]] — Apple史上最高値・ASML好決算で3指数続伸。Micron-7%・SpaceX IPO割れが重荷
-- [[us/2026-07-15]] — CPI年率3.5%に急低下で半導体全面高・NASDAQ+0.91%。IBM-25%急落がダウの重荷に
 
 ## 関連
 - [[AIインフラ]]

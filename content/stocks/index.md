@@ -58,6 +58,7 @@ publish: true
 - [[Sandisk]]
 - [[ディスコ]]
 - [[SUMCO]]
+- [[CXMT]]
 
 ## 関連
 - [[AIインフラ]]
