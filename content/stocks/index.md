@@ -59,6 +59,8 @@ publish: true
 - [[ディスコ]]
 - [[SUMCO]]
 - [[CXMT]]
+- [[Coca-Cola]]
+- [[Boeing]]
 
 ## 関連
 - [[AIインフラ]]
