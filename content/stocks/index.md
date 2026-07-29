@@ -61,6 +61,10 @@ publish: true
 - [[CXMT]]
 - [[Coca-Cola]]
 - [[Boeing]]
+- [[Caterpillar]]
+- [[Deere]]
+- [[ExxonMobil]]
+- [[Chevron]]
 
 ## 関連
 - [[AIインフラ]]
