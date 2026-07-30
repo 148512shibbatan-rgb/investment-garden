@@ -65,6 +65,7 @@ publish: true
 - [[Deere]]
 - [[ExxonMobil]]
 - [[Chevron]]
+- [[TDK]]
 
 ## 関連
 - [[AIインフラ]]
