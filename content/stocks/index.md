@@ -67,6 +67,7 @@ publish: true
 - [[Chevron]]
 - [[TDK]]
 - [[ファナック]]
+- [[Nebius]]
 
 ## 関連
 - [[AIインフラ]]
