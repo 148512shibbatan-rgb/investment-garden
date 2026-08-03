@@ -66,6 +66,7 @@ publish: true
 - [[ExxonMobil]]
 - [[Chevron]]
 - [[TDK]]
+- [[ファナック]]
 
 ## 関連
 - [[AIインフラ]]
