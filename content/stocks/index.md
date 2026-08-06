@@ -70,6 +70,9 @@ publish: true
 - [[Nebius]]
 - [[三菱重工業]]
 - [[Disney]]
+- [[Salesforce]]
+- [[Airbnb]]
+- [[Cloudflare]]
 
 ## 関連
 - [[AIインフラ]]
