@@ -73,6 +73,7 @@ publish: true
 - [[Salesforce]]
 - [[Airbnb]]
 - [[Cloudflare]]
+- [[Atlassian]]
 
 ## 関連
 - [[AIインフラ]]
