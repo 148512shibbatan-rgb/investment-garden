@@ -76,6 +76,7 @@ publish: true
 - [[Cloudflare]]
 - [[Atlassian]]
 - [[KOKUSAI ELECTRIC]]
+- [[Dell Technologies]]
 
 ## 関連
 - [[AIインフラ]]
