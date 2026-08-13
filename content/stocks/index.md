@@ -75,6 +75,7 @@ publish: true
 - [[Airbnb]]
 - [[Cloudflare]]
 - [[Atlassian]]
+- [[KOKUSAI ELECTRIC]]
 
 ## 関連
 - [[AIインフラ]]
