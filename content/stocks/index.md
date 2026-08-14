@@ -77,6 +77,8 @@ publish: true
 - [[Atlassian]]
 - [[KOKUSAI ELECTRIC]]
 - [[Dell Technologies]]
+- [[Cisco]]
+- [[Workday]]
 - [[ネクソン]]
 
 ## 関連
