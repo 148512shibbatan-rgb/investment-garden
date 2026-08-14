@@ -77,6 +77,7 @@ publish: true
 - [[Atlassian]]
 - [[KOKUSAI ELECTRIC]]
 - [[Dell Technologies]]
+- [[ネクソン]]
 
 ## 関連
 - [[AIインフラ]]
