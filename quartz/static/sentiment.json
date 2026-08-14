@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-13T23:37:00Z",
+  "generated_at": "2026-08-14T23:17:20Z",
   "as_of": "2026-08-14",
   "markets": {
     "JP": {
-      "score": 28.3,
+      "score": 28.5,
       "band": 2,
       "band_label": "弱気",
       "n_indicators": 1,
@@ -13,7 +13,7 @@
         {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
-          "percentile": 17.7,
+          "percentile": 17.3,
           "invert": false
         }
       ],
@@ -304,84 +304,84 @@
         },
         {
           "date": "2026-07-21",
-          "score": 44.1
+          "score": 44.3
         },
         {
           "date": "2026-07-22",
-          "score": 41.8
+          "score": 42.4
         },
         {
           "date": "2026-07-23",
-          "score": 40.9
+          "score": 41.7
         },
         {
           "date": "2026-07-24",
-          "score": 41.5
+          "score": 42.7
         },
         {
           "date": "2026-07-27",
-          "score": 42.0
+          "score": 44.0
         },
         {
           "date": "2026-07-28",
-          "score": 42.1
+          "score": 44.1
         },
         {
           "date": "2026-07-29",
-          "score": 40.7
+          "score": 42.2
         },
         {
           "date": "2026-07-30",
-          "score": 39.0
+          "score": 40.3
         },
         {
           "date": "2026-07-31",
-          "score": 35.7
+          "score": 37.2
         },
         {
           "date": "2026-08-03",
-          "score": 32.1
+          "score": 32.8
         },
         {
           "date": "2026-08-04",
-          "score": 28.9
+          "score": 29.2
         },
         {
           "date": "2026-08-05",
-          "score": 27.0
+          "score": 27.3
         },
         {
           "date": "2026-08-06",
-          "score": 25.1
+          "score": 25.4
         },
         {
           "date": "2026-08-07",
-          "score": 24.8
+          "score": 24.5
         },
         {
           "date": "2026-08-10",
-          "score": 25.2
+          "score": 24.9
         },
         {
           "date": "2026-08-11",
-          "score": 26.0
+          "score": 25.8
         },
         {
           "date": "2026-08-12",
-          "score": 27.0
+          "score": 26.6
         },
         {
           "date": "2026-08-13",
-          "score": 27.6
+          "score": 27.9
         },
         {
           "date": "2026-08-14",
-          "score": 28.3
+          "score": 28.5
         }
       ]
     },
     "US": {
-      "score": 83.0,
+      "score": 82.8,
       "band": 5,
       "band_label": "浮かれ",
       "n_indicators": 2,
@@ -390,21 +390,17 @@
         {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
-          "percentile": 89.1,
+          "percentile": 86.5,
           "invert": false
         },
         {
           "name": "stocks_vs_bonds",
           "label": "株 vs 債 20日リターン差",
-          "percentile": 78.6,
+          "percentile": 83.9,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-04-10",
-          "score": 31.8
-        },
         {
           "date": "2026-04-13",
           "score": 36.4
@@ -691,75 +687,79 @@
         },
         {
           "date": "2026-07-21",
-          "score": 58.7
+          "score": 60.1
         },
         {
           "date": "2026-07-22",
-          "score": 56.3
+          "score": 59.8
         },
         {
           "date": "2026-07-23",
-          "score": 52.8
+          "score": 57.6
         },
         {
           "date": "2026-07-24",
-          "score": 53.0
+          "score": 57.8
         },
         {
           "date": "2026-07-27",
-          "score": 53.1
+          "score": 58.0
         },
         {
           "date": "2026-07-28",
-          "score": 52.4
+          "score": 55.1
         },
         {
           "date": "2026-07-29",
-          "score": 48.3
+          "score": 47.4
         },
         {
           "date": "2026-07-30",
-          "score": 49.4
+          "score": 46.4
         },
         {
           "date": "2026-07-31",
-          "score": 50.2
+          "score": 47.7
         },
         {
           "date": "2026-08-03",
-          "score": 54.2
+          "score": 51.3
         },
         {
           "date": "2026-08-04",
-          "score": 59.5
+          "score": 57.0
         },
         {
           "date": "2026-08-05",
-          "score": 67.7
+          "score": 66.7
         },
         {
           "date": "2026-08-06",
-          "score": 73.4
+          "score": 73.0
         },
         {
           "date": "2026-08-07",
-          "score": 79.1
+          "score": 77.7
         },
         {
           "date": "2026-08-10",
-          "score": 81.6
+          "score": 80.3
         },
         {
           "date": "2026-08-11",
-          "score": 81.9
+          "score": 80.8
         },
         {
           "date": "2026-08-12",
-          "score": 82.6
+          "score": 81.8
         },
         {
           "date": "2026-08-13",
-          "score": 83.0
+          "score": 82.8
+        },
+        {
+          "date": "2026-08-14",
+          "score": 82.8
         }
       ]
     },
@@ -767,8 +767,8 @@
       "score": 55.6,
       "band": 3,
       "band_label": "中立",
-      "jp": 28.3,
-      "us": 83.0
+      "jp": 28.5,
+      "us": 82.8
     }
   }
 }
