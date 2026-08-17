@@ -80,6 +80,7 @@ publish: true
 - [[Cisco]]
 - [[Workday]]
 - [[ネクソン]]
+- [[任天堂]]
 
 ## 関連
 - [[AIインフラ]]
