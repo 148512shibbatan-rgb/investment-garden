@@ -81,6 +81,9 @@ publish: true
 - [[Workday]]
 - [[ネクソン]]
 - [[任天堂]]
+- [[Adobe]]
+- [[Marvell Technology]]
+- [[Intuit]]
 
 ## 関連
 - [[AIインフラ]]
