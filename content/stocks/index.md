@@ -84,6 +84,8 @@ publish: true
 - [[Adobe]]
 - [[Marvell Technology]]
 - [[Intuit]]
+- [[Moderna]]
+- [[Merck]]
 
 ## 関連
 - [[AIインフラ]]
