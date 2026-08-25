@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-24T23:18:53Z",
-  "as_of": "2026-08-25",
+  "generated_at": "2026-08-25T23:21:37Z",
+  "as_of": "2026-08-26",
   "markets": {
     "JP": {
-      "score": 25.7,
+      "score": 25.3,
       "band": 2,
       "band_label": "弱気",
       "n_indicators": 1,
@@ -13,15 +13,11 @@
         {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
-          "percentile": 8.7,
+          "percentile": 8.9,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-04-22",
-          "score": 45.7
-        },
         {
           "date": "2026-04-23",
           "score": 46.2
@@ -372,16 +368,20 @@
         },
         {
           "date": "2026-08-24",
-          "score": 26.9
+          "score": 26.6
         },
         {
           "date": "2026-08-25",
-          "score": 25.7
+          "score": 25.6
+        },
+        {
+          "date": "2026-08-26",
+          "score": 25.3
         }
       ]
     },
     "US": {
-      "score": 73.0,
+      "score": 73.4,
       "band": 4,
       "band_label": "強気",
       "n_indicators": 2,
@@ -390,21 +390,17 @@
         {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
-          "percentile": 56.2,
+          "percentile": 59.7,
           "invert": false
         },
         {
           "name": "stocks_vs_bonds",
           "label": "株 vs 債 20日リターン差",
-          "percentile": 73.0,
+          "percentile": 70.6,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-04-21",
-          "score": 60.3
-        },
         {
           "date": "2026-04-22",
           "score": 61.4
@@ -760,6 +756,10 @@
         {
           "date": "2026-08-24",
           "score": 73.0
+        },
+        {
+          "date": "2026-08-25",
+          "score": 73.4
         }
       ]
     },
@@ -767,8 +767,8 @@
       "score": 49.4,
       "band": 3,
       "band_label": "中立",
-      "jp": 25.7,
-      "us": 73.0
+      "jp": 25.3,
+      "us": 73.4
     }
   }
 }
