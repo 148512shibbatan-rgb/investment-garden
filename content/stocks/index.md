@@ -93,6 +93,7 @@ publish: true
 - [[ソニーグループ]]
 - [[パナソニックHD]]
 - [[東京海上HD]]
+- [[Dick's Sporting Goods]]
 
 ## 関連
 - [[AIインフラ]]
