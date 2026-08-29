@@ -1,31 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-28T06:44:30Z",
+  "generated_at": "2026-08-29T04:00:07Z",
   "as_of": "2026-08-28",
   "markets": {
     "JP": {
-      "score": 30.5,
+      "score": 28.4,
       "band": 2,
       "band_label": "弱気",
-      "n_indicators": 3,
+      "n_indicators": 1,
       "stale": false,
       "components": [
         {
-          "name": "nikkei_vi",
-          "label": "日経VI(代理)",
-          "percentile": 35.3,
-          "invert": true
-        },
-        {
-          "name": "n225_mom125",
-          "label": "日経225 vs 125日線",
-          "percentile": 48.4,
-          "invert": false
-        },
-        {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
-          "percentile": 33.5,
+          "percentile": 39.3,
           "invert": false
         }
       ],
@@ -388,17 +376,29 @@
         },
         {
           "date": "2026-08-28",
-          "score": 30.5
+          "score": 28.4
         }
       ]
     },
     "US": {
-      "score": 75.9,
+      "score": 77.4,
       "band": 4,
       "band_label": "強気",
-      "n_indicators": 2,
+      "n_indicators": 4,
       "stale": false,
       "components": [
+        {
+          "name": "vix",
+          "label": "VIX",
+          "percentile": 93.9,
+          "invert": true
+        },
+        {
+          "name": "hy_oas",
+          "label": "ハイイールドOAS",
+          "percentile": 97.5,
+          "invert": true
+        },
         {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
@@ -771,16 +771,16 @@
         },
         {
           "date": "2026-08-27",
-          "score": 75.9
+          "score": 77.4
         }
       ]
     },
     "GLOBAL": {
-      "score": 53.2,
+      "score": 52.9,
       "band": 3,
       "band_label": "中立",
-      "jp": 30.5,
-      "us": 75.9
+      "jp": 28.4,
+      "us": 77.4
     }
   }
 }
