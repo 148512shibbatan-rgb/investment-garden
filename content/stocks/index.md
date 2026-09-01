@@ -96,6 +96,8 @@ publish: true
 - [[Dick's Sporting Goods]]
 - [[KDDI]]
 - [[三菱商事]]
+- [[CrowdStrike]]
+- [[Palo Alto Networks]]
 
 ## 関連
 - [[AIインフラ]]
