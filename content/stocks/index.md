@@ -94,6 +94,8 @@ publish: true
 - [[パナソニックHD]]
 - [[東京海上HD]]
 - [[Dick's Sporting Goods]]
+- [[KDDI]]
+- [[三菱商事]]
 
 ## 関連
 - [[AIインフラ]]
