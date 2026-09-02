@@ -98,6 +98,7 @@ publish: true
 - [[三菱商事]]
 - [[CrowdStrike]]
 - [[Palo Alto Networks]]
+- [[伊藤園]]
 
 ## 関連
 - [[AIインフラ]]
