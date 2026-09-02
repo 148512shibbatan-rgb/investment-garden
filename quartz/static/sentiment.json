@@ -1,39 +1,35 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-01T01:35:49Z",
-  "as_of": "2026-09-01",
+  "generated_at": "2026-09-02T00:47:14Z",
+  "as_of": "2026-09-02",
   "markets": {
     "JP": {
-      "score": 38.7,
-      "band": 2,
-      "band_label": "弱気",
+      "score": 44.3,
+      "band": 3,
+      "band_label": "中立",
       "n_indicators": 3,
       "stale": false,
       "components": [
         {
           "name": "nikkei_vi",
           "label": "日経VI(代理)",
-          "percentile": 48.4,
+          "percentile": 39.3,
           "invert": true
         },
         {
           "name": "n225_mom125",
           "label": "日経225 vs 125日線",
-          "percentile": 47.6,
+          "percentile": 37.9,
           "invert": false
         },
         {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
-          "percentile": 67.7,
+          "percentile": 71.2,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-04-29",
-          "score": 46.5
-        },
         {
           "date": "2026-04-30",
           "score": 48.2
@@ -384,39 +380,39 @@
         },
         {
           "date": "2026-08-31",
-          "score": 33.1
+          "score": 35.7
         },
         {
           "date": "2026-09-01",
-          "score": 38.7
+          "score": 40.4
+        },
+        {
+          "date": "2026-09-02",
+          "score": 44.3
         }
       ]
     },
     "US": {
-      "score": 79.4,
-      "band": 4,
-      "band_label": "強気",
+      "score": 80.8,
+      "band": 5,
+      "band_label": "浮かれ",
       "n_indicators": 2,
       "stale": false,
       "components": [
         {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
-          "percentile": 55.6,
+          "percentile": 47.6,
           "invert": false
         },
         {
           "name": "stocks_vs_bonds",
           "label": "株 vs 債 20日リターン差",
-          "percentile": 49.4,
+          "percentile": 49.0,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-04-28",
-          "score": 63.2
-        },
         {
           "date": "2026-04-29",
           "score": 63.3
@@ -767,20 +763,24 @@
         },
         {
           "date": "2026-08-28",
-          "score": 78.2
+          "score": 78.8
         },
         {
           "date": "2026-08-31",
-          "score": 79.4
+          "score": 79.6
+        },
+        {
+          "date": "2026-09-01",
+          "score": 80.8
         }
       ]
     },
     "GLOBAL": {
-      "score": 59.1,
-      "band": 3,
-      "band_label": "中立",
-      "jp": 38.7,
-      "us": 79.4
+      "score": 62.5,
+      "band": 4,
+      "band_label": "強気",
+      "jp": 44.3,
+      "us": 80.8
     }
   }
 }
