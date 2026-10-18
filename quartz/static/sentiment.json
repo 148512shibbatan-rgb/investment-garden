@@ -1,15 +1,27 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-17T01:00:10Z",
+  "generated_at": "2026-10-18T00:35:46Z",
   "as_of": "2026-10-16",
   "markets": {
     "JP": {
-      "score": 53.1,
+      "score": 49.8,
       "band": 3,
       "band_label": "中立",
-      "n_indicators": 1,
+      "n_indicators": 3,
       "stale": false,
       "components": [
+        {
+          "name": "nikkei_vi",
+          "label": "日経VI(代理)",
+          "percentile": 27.4,
+          "invert": true
+        },
+        {
+          "name": "n225_mom125",
+          "label": "日経225 vs 125日線",
+          "percentile": 15.3,
+          "invert": false
+        },
         {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
@@ -376,7 +388,7 @@
         },
         {
           "date": "2026-10-16",
-          "score": 53.1
+          "score": 49.8
         }
       ]
     },
@@ -384,13 +396,19 @@
       "score": 47.1,
       "band": 3,
       "band_label": "中立",
-      "n_indicators": 1,
+      "n_indicators": 2,
       "stale": false,
       "components": [
         {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
           "percentile": 20.8,
+          "invert": false
+        },
+        {
+          "name": "stocks_vs_bonds",
+          "label": "株 vs 債 20日リターン差",
+          "percentile": 37.1,
           "invert": false
         }
       ],
@@ -758,10 +776,10 @@
       ]
     },
     "GLOBAL": {
-      "score": 50.1,
+      "score": 48.5,
       "band": 3,
       "band_label": "中立",
-      "jp": 53.1,
+      "jp": 49.8,
       "us": 47.1
     }
   }
