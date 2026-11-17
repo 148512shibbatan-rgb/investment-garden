@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-16T02:32:27Z",
-  "as_of": "2026-11-16",
+  "generated_at": "2026-11-17T04:56:25Z",
+  "as_of": "2026-11-17",
   "markets": {
     "JP": {
-      "score": 26.5,
+      "score": 27.6,
       "band": 2,
       "band_label": "弱気",
       "n_indicators": 3,
@@ -13,27 +13,23 @@
         {
           "name": "nikkei_vi",
           "label": "日経VI(代理)",
-          "percentile": 21.8,
+          "percentile": 20.6,
           "invert": true
         },
         {
           "name": "n225_mom125",
           "label": "日経225 vs 125日線",
-          "percentile": 3.4,
+          "percentile": 2.2,
           "invert": false
         },
         {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
-          "percentile": 69.8,
+          "percentile": 51.2,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-07-14",
-          "score": 52.7
-        },
         {
           "date": "2026-07-15",
           "score": 53.2
@@ -388,12 +384,16 @@
         },
         {
           "date": "2026-11-16",
-          "score": 26.5
+          "score": 26.4
+        },
+        {
+          "date": "2026-11-17",
+          "score": 27.6
         }
       ]
     },
     "US": {
-      "score": 17.1,
+      "score": 19.0,
       "band": 1,
       "band_label": "悲壮",
       "n_indicators": 2,
@@ -402,21 +402,17 @@
         {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
-          "percentile": 15.3,
+          "percentile": 12.5,
           "invert": false
         },
         {
           "name": "stocks_vs_bonds",
           "label": "株 vs 債 20日リターン差",
-          "percentile": 24.2,
+          "percentile": 9.3,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-07-13",
-          "score": 72.4
-        },
         {
           "date": "2026-07-14",
           "score": 72.0
@@ -763,24 +759,28 @@
         },
         {
           "date": "2026-11-11",
-          "score": 12.0
+          "score": 12.1
         },
         {
           "date": "2026-11-12",
-          "score": 15.0
+          "score": 15.1
         },
         {
           "date": "2026-11-13",
-          "score": 17.1
+          "score": 17.8
+        },
+        {
+          "date": "2026-11-16",
+          "score": 19.0
         }
       ]
     },
     "GLOBAL": {
-      "score": 21.8,
+      "score": 23.3,
       "band": 2,
       "band_label": "弱気",
-      "jp": 26.5,
-      "us": 17.1
+      "jp": 27.6,
+      "us": 19.0
     }
   }
 }
