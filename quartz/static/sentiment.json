@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-17T04:56:25Z",
-  "as_of": "2026-11-17",
+  "generated_at": "2026-11-18T04:00:10Z",
+  "as_of": "2026-11-18",
   "markets": {
     "JP": {
-      "score": 27.6,
+      "score": 28.8,
       "band": 2,
       "band_label": "弱気",
       "n_indicators": 3,
@@ -13,7 +13,7 @@
         {
           "name": "nikkei_vi",
           "label": "日経VI(代理)",
-          "percentile": 20.6,
+          "percentile": 20.8,
           "invert": true
         },
         {
@@ -25,15 +25,11 @@
         {
           "name": "usdjpy_mom20",
           "label": "USD/JPY 20日モメンタム",
-          "percentile": 51.2,
+          "percentile": 56.7,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-07-15",
-          "score": 53.2
-        },
         {
           "date": "2026-07-16",
           "score": 52.1
@@ -388,12 +384,16 @@
         },
         {
           "date": "2026-11-17",
-          "score": 27.6
+          "score": 27.9
+        },
+        {
+          "date": "2026-11-18",
+          "score": 28.8
         }
       ]
     },
     "US": {
-      "score": 19.0,
+      "score": 18.2,
       "band": 1,
       "band_label": "悲壮",
       "n_indicators": 2,
@@ -402,21 +402,17 @@
         {
           "name": "spx_mom125",
           "label": "S&P500 vs 125日線",
-          "percentile": 12.5,
+          "percentile": 8.7,
           "invert": false
         },
         {
           "name": "stocks_vs_bonds",
           "label": "株 vs 債 20日リターン差",
-          "percentile": 9.3,
+          "percentile": 6.5,
           "invert": false
         }
       ],
       "history": [
-        {
-          "date": "2026-07-14",
-          "score": 72.0
-        },
         {
           "date": "2026-07-15",
           "score": 73.3
@@ -771,16 +767,20 @@
         },
         {
           "date": "2026-11-16",
-          "score": 19.0
+          "score": 17.4
+        },
+        {
+          "date": "2026-11-17",
+          "score": 18.2
         }
       ]
     },
     "GLOBAL": {
-      "score": 23.3,
+      "score": 23.5,
       "band": 2,
       "band_label": "弱気",
-      "jp": 27.6,
-      "us": 19.0
+      "jp": 28.8,
+      "us": 18.2
     }
   }
 }
